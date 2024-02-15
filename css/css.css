@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Old Standard TT', serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+section {
+    margin: 40px 0;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    z-index: 500;
+}
+
+.fixed-header h1 {
+    margin: 0;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 1.5em;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    align-items: center;
+}
+
+.navigation form {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.navigation input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.navigation button {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation button:hover {
+    background-color: #777;
+}
+
+.navigation p,
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation p:hover,
+.navigation a:hover {
+    color: #ddd;
+}
+
+main {
+    padding-top: 90px;
+}
+
+.book,
+.genre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.book img,
+.genre img {
+    max-width: 100%;
+    height: auto;
+}
+.man-reading{
+    width: 100%; /* Set the width to 100% for responsiveness */
+    height: auto;
+    max-width: 200px; /* Set a maximum width for larger screens */
+}
+
+h2 {
+    margin-top: 20px;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 320px) {
+    .navigation {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .navigation {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .navigation {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .fixed-header {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .navigation form {
+        margin-left: 0;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    .book,
+    .genre {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    /* Your styles for this range */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    /* Your styles for this range */
+}
